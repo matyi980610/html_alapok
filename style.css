@@ -1,0 +1,30 @@
+/*csslint order-alphabetical: false*/
+.fo-menu 
+        {
+            background-color: gray;
+            height: 80px;
+        }
+.menupont
+        {
+            color: white;
+            height: 40px;
+            display: inline-block;
+           /* margin: 10px;
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            */
+            margin: 10px 0 10px 10px; /*fülül, jobra, alul, balra*/
+            background-color: blue;
+        /*
+            padding-top: 22px;
+            padding-left: 10px;
+            padding-right: 10px;
+        */
+            padding: 22px 10px 0 10px;
+        }
+.tartalom
+    {
+        background-color: lightgray;
+        height: 1000px; /*hogy a scroll bar megjelenjen*/
+    }
