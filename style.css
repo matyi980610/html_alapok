@@ -27,4 +27,9 @@
     {
         background-color: lightgray;
         height: 1000px; /*hogy a scroll bar megjelenjen*/
+        zoom: 0.7;/* osszehúzza a bbetűket*/
+        /* 
+        nem mindent lehet használni itt meg lehet mindent nézni mit minel lehet
+        https://caniuse.com
+        */
     }
