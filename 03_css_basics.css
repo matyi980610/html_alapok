@@ -4,7 +4,8 @@
             background-color: gray;
             height: 80px;
         }
-.menupont
+/*ez a fomenu classon belüli menüpont classokat választja ki*/
+.fo-menu .menupont
         {
             color: white;
             height: 40px;
@@ -23,8 +24,28 @@
         */
             padding: 22px 10px 0 10px;
         }
+.al-menu
+    {
+     margin-top: 20px;
+    /*jobbrarendezi*/
+        float: right;
+        
+    }
+.al-menu .menupont
+    {
+        display: inline-block;
+        margin-left: 10px;
+        text-decoration: underline;
+
+    }
+/*ha felé visszuk az egeret akkorbekékül*/
+.al-menu .menupont:hover
+{
+    color: blue;
+}
 .tartalom
     {
+        margin-top: 40px;
         background-color: lightgray;
         height: 1000px; /*hogy a scroll bar megjelenjen*/
         zoom: 0.7;/* osszehúzza a bbetűket*/
