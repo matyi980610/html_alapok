@@ -1,56 +1,86 @@
-/*csslint order-alphabetical: false*/
-.fo-menu 
-        {
-            background-color: gray;
-            height: 80px;
-        }
-/*ez a fomenu classon belüli menüpont classokat választja ki*/
-.fo-menu .menupont
-        {
-            color: white;
-            height: 40px;
-            display: inline-block;
-           /* margin: 10px;
-            margin-left: 10px;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            */
-            margin: 10px 0 10px 10px; /*fülül, jobra, alul, balra*/
-            background-color: blue;
-        /*
-            padding-top: 22px;
-            padding-left: 10px;
-            padding-right: 10px;
-        */
-            padding: 22px 10px 0 10px;
-        }
-.al-menu
-    {
-     margin-top: 20px;
-    /*jobbrarendezi*/
-        float: right;
-        
-    }
-.al-menu .menupont
-    {
-        display: inline-block;
-        margin-left: 10px;
-        text-decoration: underline;
+//*csslint order-alphabetical: false*/
+/* CSSLint */
 
-    }
-/*ha felé visszuk az egeret akkorbekékül*/
-.al-menu .menupont:hover
-{
-    color: blue;
+.fo-menu {
+    background-color: aqua;
+    height: 80px;
 }
-.tartalom
-    {
-        margin-top: 40px;
-        background-color: lightgray;
-        height: 1000px; /*hogy a scroll bar megjelenjen*/
-        zoom: 0.7;/* osszehúzza a bbetűket*/
-        /* 
-        nem mindent lehet használni itt meg lehet mindent nézni mit minel lehet
-        https://caniuse.com
-        */
-    }
+
+/* ez a fo-menu classon belüli menüpont class-okat választja ki */
+.fo-menu .menupont {
+    height: 40px;
+    /* körbe mindenhol 10px a magrin */
+    /* margin: 10px; */
+
+    /* a következő három sort rövidítve is lehet írni */
+    /* margin-left: 10px; */
+    /* margin-top: 10px; */
+    /* margin-bottom: 10px; */
+
+    /* az előző három sor rövidítve így néz ki:  */
+    margin: 10px 0 10px 10px;  /* fölül, jobbra, alul, balra */
+    background-color: blue;
+    color: white;
+    /* ez a css property megváltoztatja a html elem alapértelmezett működését, jelen esetben */
+    /* egy block szintű elem (div)-ből inline elem-et csinál, de a block tulajdonságait is megőrzi */
+    /* azaz, reagálni fog az elem a width, és height paraméterekre */
+    /* read more: https://www.w3schools.com/css/css_inline-block.asp */
+    display: inline-block;
+
+    /* padding-top: 22px; */
+    /* padding-left: 10px; */
+    /* padding-right: 10px; */
+    /* padding-bottom: 0; */
+
+    /* az előző három sor rövidítve így néz ki:  */
+    padding: 22px 10px 0 10px; /* fölül, jobbra, alul, balra */
+}
+
+.al-menu { 
+    margin-top: 20px;
+    /* jobbra rendezzük az almenüt */
+    float: right;
+
+}
+
+.al-menu .menupont {
+    display: inline-block;
+    margin-left: 10px;
+    text-decoration: underline;
+}
+
+/* ha a menüpont fölé visszük az egeret, akkor bekékül az adott menüpont */
+/* touch-screen-en NINCS hover!! */
+.al-menu .menupont:hover {
+    color: blue;
+    /* átalakítja az egér mutatóját kis kézre */
+    cursor: pointer;
+}
+
+
+.tartalom {
+    background-color: lightgrey;
+    margin-top: 40px;
+    height: 1000px;  /*ez csak azért kell hogy a scrollbar megjelenjen */
+    /* bizonoyos css property-ket nem ajánlott használni, mert nem minden böngésző */
+    /* ismeri. Ezt a caniuse.com weboldalon ellenőrizhetjük */
+    /* https://caniuse.com/#search=zoom */
+    /* pl zoom nem működik firefoxban!!! */
+    /* zoom: 0.1; */
+}
+
+/* #learnabout box-modell https://www.w3schools.com/css/css_boxmodel.asp */
+
+
+.fixed-doboz {
+    width: 100%;
+    height: 50px;
+    background-color: blue;
+    color: white;
+    /* a position fixed, kiszedi az elemet a document flow-ból, és egy fix helyre beteszi */
+    /* a többi elem számára ez az elem nem lesz látható */
+    position: static;
+    /* ezek csak akkor működnek ha a position: fixed be van állítva */
+    top:0;
+    right:0;
+}
